@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER Manel Martinez <manel@nixelsolutions.com>
 
 RUN apt-get update && \
-    apt-get install -y openvpn iptables sshpass supervisor
+    apt-get install -y openvpn iptables sshpass supervisor ipcalc
 
 RUN mkdir -p /etc/openvpn /var/log/supervisor
 
