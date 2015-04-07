@@ -29,3 +29,8 @@ for SERVER in `echo ${VPN_SERVERS} | sed "s/,/ /g"`; do
        continue
     fi
 done
+
+# Enable tcp forwarding and add iptables MASQUERADE rule
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -F
+iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
