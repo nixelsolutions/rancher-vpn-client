@@ -3,7 +3,7 @@
 [ "$DEBUG" == "1" ] && set -x
 
 VPN_PATH=/etc/openvpn
-SSH_OPTS="-p 2222 -o ConnectTimeout=4 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+SSH_OPTS="-p ${VPN_SSH_PORT} -o ConnectTimeout=4 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
 set -e
 

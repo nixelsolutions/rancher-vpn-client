@@ -8,6 +8,7 @@ RUN apt-get update && \
 RUN mkdir -p /etc/openvpn /var/log/supervisor
 
 ENV VPN_PATH /etc/openvpn
+ENV VPN_SSH_PORT 2222
 ENV VPN_SERVERS **ChangeMe**
 ENV VPN_PASSWORD **ChangeMe**
 ENV DEBUG 0
